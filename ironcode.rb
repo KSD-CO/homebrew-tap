@@ -5,13 +5,13 @@
 class Ironcode < Formula
   desc "The AI coding agent built for the terminal."
   homepage "https://github.com/KSD-CO/IronCode"
-  version "1.15.4"
+  version "1.15.5"
 
   depends_on "ripgrep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.4/ironcode-darwin-x64.zip"
+      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.5/ironcode-darwin-x64.zip"
       sha256 ""
 
       def install
@@ -19,8 +19,8 @@ class Ironcode < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.4/ironcode-darwin-arm64.zip"
-      sha256 "ce978c33e42fd6c46b95ef5f011cceefb5310670910d796eb32329338bfe8cf5"
+      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.5/ironcode-darwin-arm64.zip"
+      sha256 "93ae1dc25fe4404af2538ca509352aa50f1816444e05c78ca3bb1243bfc0ee9e"
 
       def install
         bin.install "ironcode"
@@ -30,14 +30,14 @@ class Ironcode < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.4/ironcode-linux-x64.tar.gz"
-      sha256 "6afdc59f5c5e81bdad3cd3d8a2a48c223374a673e1a89ebe6a01a7f9fba14379"
+      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.5/ironcode-linux-x64.tar.gz"
+      sha256 "ca1a6a01c3b322d7526023ecd51ada8524da093074abd48dfeecd353f2d11b2a"
       def install
         bin.install "ironcode"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.4/ironcode-linux-arm64.tar.gz"
+      url "https://github.com/KSD-CO/IronCode/releases/download/v1.15.5/ironcode-linux-arm64.tar.gz"
       sha256 ""
       def install
         bin.install "ironcode"
